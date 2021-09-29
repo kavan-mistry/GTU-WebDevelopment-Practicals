@@ -1,0 +1,70 @@
+<!-- Implementation of JavaScript Function with arguments that returns a value. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Practical 4</title>
+    <script>
+
+        function add() {
+            var num1, num2, total;
+            num1 = Number(document.getElementById("num1").value);
+            num2 = Number(document.getElementById("num2").value);
+            total = "Your answer of Addition is : "+ (num1 + num2);
+            document.getElementById("output").value = total;
+        }
+
+        function sub() {
+            var num1, num2, total;
+            num1 = Number(document.getElementById("num1").value);
+            num2 = Number(document.getElementById("num2").value);
+            total = "Your answer of Subtraction is : "+ (num1 - num2);
+            document.getElementById("output").value = total;
+        }
+
+        function mul() {
+            var num1, num2, total;
+            num1 = Number(document.getElementById("num1").value);
+            num2 = Number(document.getElementById("num2").value);
+            total = "Your answer of Multiplication is : "+ (num1 * num2);
+            document.getElementById("output").value = total;
+        }
+
+        function divi() {
+            var num1, num2, total;
+            num1 = Number(document.getElementById("num1").value);
+            num2 = Number(document.getElementById("num2").value);
+            total = "Your answer of Division is : "+ (num1 / num2);
+            document.getElementById("output").value = total;
+        }
+
+    </script>
+
+    <style>
+        input#output{
+            outline: none;
+            border: none;
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript Function with arguments that returns a value.</h1>
+    Enter number one : <input type="number" name="num1" id="num1">
+    <br>
+    <br>
+    Enter number two : <input type="number" name="num2" id="num2">
+    <br>
+    <br>
+    <button id="add" onclick="add()">Addition</button>
+    <button id="sub" onclick="sub()">Subtraction</button>
+    <button id="multi" onclick="mul()">Multiplication</button>
+    <button id="divi" onclick="divi()">Division</button>
+    <br>
+    <br>
+    <input id="output">
+</body>
+
+</html>

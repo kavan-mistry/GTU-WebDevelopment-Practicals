@@ -1,0 +1,43 @@
+<!-- Implementation of JavaScript following methods.
+- Alert.
+- Confirm.
+- Prompt. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Practical 5 C</title>
+    <script>
+        function myFunction() {
+            var text;
+            var lottary = prompt("If you have a chance to open one door among three \nWhich door you open? \nRemember one door open your luck", "center");
+            switch (lottary) {
+                case "left":
+                    text = "Excellent choice. you lost your luck.";
+                    break;
+                case "center":
+                    text = "center is best choice! but better luck next time ;)";
+                    break;
+                case "right":
+                    text = "You are very close to win .....";
+                    break;
+                default:
+                    text = "Welcome to 1 % luck community :)";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+</head>
+
+<body>
+    <h4>Prompt example in JavaScript</h4>
+
+    <p>Click the button to display a dialog box which will ask for some thing.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+</body>
+
+</html>

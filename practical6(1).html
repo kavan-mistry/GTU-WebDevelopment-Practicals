@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <title>Login page</title>
+    <script>
+
+        function Validate_Username() {
+
+            let x = document.getElementById("Username").value;
+            let word = "";
+
+            if (Boolean(x) == true) {
+
+                for (var i = 0; i < 10; i++) {
+                    if (x.charAt(0) == i) {
+                        word += "Error";
+                        document.getElementById("condition").innerHTML = word;
+                        console.log("Error");
+                        break;
+                    }
+
+
+                    else if (x.charAt(0) == "_") {
+                        word += "Error";
+                        document.getElementById("condition").innerHTML = word;
+                        console.log("Error");
+                        break;
+                    }
+
+                    else if (x.charAt(0) == "@") {
+                        word += "Error";
+                        document.getElementById("condition").innerHTML = word;
+                        console.log("Error");
+                        break;
+                    }
+
+
+                    else {
+                        word += "Valid";
+                        document.getElementById("condition").innerHTML = word;
+                        console.log("Valid");
+                        break;
+                    }
+                }
+            }
+
+            else if (Boolean(x) == false) {
+                word += "Error";
+                document.getElementById("condition").innerHTML = word;
+                console.log("Error");
+            }
+        }
+
+        function Validate_Password() {
+
+            let x = document.getElementById("Pass").value;
+            let text = "";
+            let k = x.length;
+
+            if (k > 12) {
+                text += "Error";
+                document.getElementById("scenario").innerHTML = text;
+                console.log("Error");
+            }
+
+            else if (k < 6) {
+                text += "Error";
+                document.getElementById("scenario").innerHTML = text;
+                console.log("Error");
+            }
+
+            else {
+                text += "Valid";
+                document.getElementById("scenario").innerHTML = text;
+                console.log("Valid");
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    Please Enter Your Username : <input type="text" name="Username" id="Username" onchange="Validate_Username()" />
+    <strong id="condition"></strong><br><br>
+    Please Enter Your Password : <input type="password" name="Password" id="Pass" onchange="Validate_Password()" />
+    <strong id="scenario"></strong><br><br>
+    <button>Submit</button>
+</body>
+
+</html>

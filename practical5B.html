@@ -1,0 +1,49 @@
+<!-- Implementation of JavaScript following methods.
+- Alert.
+- Confirm.
+- Prompt. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Practical 5 B</title>
+    <script>
+        function myFunction1() {
+            var txt;
+            var r = confirm("Are you sure you are greater than 18 ?");
+            if (r == true) {
+                txt = "You are able to vote !";
+            } else {
+                txt = "You are not able to vote !";
+            }
+            document.getElementById("demo").innerHTML = txt;
+        }
+
+        function myFunction2() {
+            var txt;
+            var r = confirm("You are not greater than 18");
+            if (r == true) {
+                txt = "You are not able to vote !";
+            } else {
+                txt = "You are able to vote !";
+            }
+            document.getElementById("demo").innerHTML = txt;
+        }
+    </script>
+</head>
+
+<body>
+    <h4>
+        confirm massage using JavaScript.
+    </h4>
+
+    <h2>Are you older than 18 ?</h2>
+
+    <button onclick="myFunction1()">Yes</button>
+    <button onclick="myFunction2()">No</button>
+
+    <p id="demo"></p>
+</body>
+
+</html>

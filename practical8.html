@@ -1,0 +1,45 @@
+<!-- Write down java script code to check mobile number(mobile number should start with 8 or 9). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Practical 8</title>
+
+    <style>
+        input{
+            height: 30px;
+            width: 300px;
+        }
+        div{
+            margin-top: 150px;
+        }
+
+    </style>
+</head>
+<body>
+    <form name="ch">
+        <center>
+            <div>
+                <br><input type="number" name="n" placeholder="Mobile Number"><br>
+                <br><input type="submit" value="check" onclick="check()">
+            </div>
+        </center>
+    </form>
+
+    <script>
+        function check()
+        {
+            var n = document.ch.n.value[0];
+            var l = document.ch.n.value.length;
+            if ((n == 8 || n == 9) && l==10) 
+            {
+                alert("Valid Number ....");         
+            }
+            else
+            {
+                alert("Invalid Number ....");
+            }
+        }
+    </script>
+</body>
+</html>

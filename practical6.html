@@ -1,0 +1,88 @@
+<!-- write down JavaScript code to validate user name and password.
+1. password length 6 to 12
+2. user name should not start with  _ , @ or any number
+3. both are not blank -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Practical 6</title>
+
+    <script>
+
+        function bothNotSameAndBlank() {
+            var pass1 = document.getElementById("pass1").Value;
+            var pass2 = document.getElementById("pass2").Value;
+            let x = pass1.length();
+
+            if (pass1=="" || pass2==null) {
+                document.getElementById("message").innerHTML = "please fill both the password field.";
+                break;
+            }
+
+            else if (pass1=="" || pass2==null) {
+                document.getElementById("message").innerHTML = "please fill both the password field.";
+                break;
+            }
+
+            else if (x<6){
+                document.getElementById("message").innerHTML = "password must be 6 character long.";
+                break;
+            }
+
+            else if (x>12) {
+                document.getElementById("message").innerHTML = "password must be 11 character short.";
+                break;
+            }
+
+        }
+
+    </script>
+
+    <style>
+        div.form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #message {
+            color: red;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="form">
+        <form action="" method="GET" onsubmit="bothNotSameAndBlank()">
+            <h1>Welcome !</h1>
+
+            <h3>Please fill very carefully.</h3>
+
+            <p>Enter your Name : </p>
+            <input type="text">
+
+            <p>Enter your password : </p>
+            <input type="text" id="pass1">
+
+            <p>Re-enter your password</p>
+            <input type="text" id="pass2">
+
+            <br>
+            <br>
+
+            <div id="message"> </div>
+
+            <br>
+            <br>
+
+            <input type="submit" value="submit">
+            <input type="reset" value="reset">
+        </form>
+    </div>
+</body>
+
+</html>
